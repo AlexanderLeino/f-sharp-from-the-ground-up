@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "cHC2kGBwUyPyu9vQl9yPDjoS+qIfajfXHfa0iJMoRkGESotFtun91Yfow2UY2wEEzhxW4+zovh3Lx6PViTNPyA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Alexa\\Documents\\coding-folders\\fsharp-from-the-ground-up\\currying\\currying.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alexa\\.nuget\\packages\\fsharp.core\\6.0.5\\fsharp.core.6.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}

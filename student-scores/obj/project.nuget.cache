@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Vra/NNsk4r8G22dfQbjLz4M1hD+FDAxhh9vcdNnL64/ycuUdNC4KIJzt9avJmF/f41bRB9j3+zVKIcicD1rO9A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Alexa\\Documents\\coding-folders\\fsharp-from-the-ground-up\\student-scores\\student-scores.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alexa\\.nuget\\packages\\fsharp.core\\6.0.5\\fsharp.core.6.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
