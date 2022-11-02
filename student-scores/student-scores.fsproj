@@ -5,7 +5,10 @@
     <RootNamespace>student_scores</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Points.fs" />
     <Compile Include="Float.fs" />
+    <Compile Include="Optional.fs" />
+    <Compile Include="TestResult.fs" />
     <Compile Include="Student.fs" />
     <Compile Include="Summary.fs" />
     <Compile Include="Program.fs" />

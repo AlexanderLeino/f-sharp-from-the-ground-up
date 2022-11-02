@@ -12,12 +12,24 @@ open Summary
 
             if  File.Exists filePath then
                 printfn "Processing %s" filePath
+                try
                 Summary.summarize filePath
                 0
+                with
+                | :? FormatException as e ->
+                    printfn "Error: %s" e.Message
+                    printfn "The file was not in the expected format"
+                    1
+                | :? IOException as e ->
+                printfn "Error: %s" e.Message
+                printfn "The file is open in another program, please close it"
+                3
+                | _ as e -> printfn "Unexpected error: %s" e.Message
+                4
             else 
                 printfn "File Not Found: %s" filePath
                 2
         else 
             printfn "Please specify a file"
-            1
+            5
 

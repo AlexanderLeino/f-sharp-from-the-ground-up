@@ -1,8 +1,10 @@
 namespace Student
 open StudentScores
+
 type Student = 
     {
-        Name: string
+        Surname : string
+        GivenName : string
         Id : string
         MeanScore: float
         MinScore: float
@@ -11,19 +13,38 @@ type Student =
 
 module Student = 
 
+    let nameParts (s: string) = 
+        let elements = s.Split(',')
+        match elements with 
+        | [|surname; givenName|] ->
+            {|  
+                Surname = surname.Trim() 
+                GivenName = givenName.Trim()
+            |}
+
+        | [|surname|] ->        
+            {|  
+                Surname = surname.Trim()
+                GivenName = "(None)"
+            |}
+        | _ -> 
+            raise (System.FormatException(sprintf "Invalid Name Format: \"%s\""s))
+
     let fromString (s : string) =
         let elements = s.Split('\t')
-        let name = elements.[0]
+        let name = elements.[0] |> nameParts
         let id = elements.[1]
         let scores = 
             elements
             |> Array.skip 2
-            |> Array.map (Float.fromStringOr50 50.0)
+            |> Array.map TestResult.fromString
+            |> Array.choose TestResult.tryEffectiveScore
         let meanScore = scores |> Array.average
         let minScore = scores |> Array.min
         let maxScore = scores |> Array.max
         {
-            Name = name
+            Surname = name.Surname
+            GivenName = name.GivenName
             Id = id
             MeanScore = meanScore
             MinScore = minScore
@@ -31,4 +52,4 @@ module Student =
         }
 
     let printSummary (student: Student) =
-        printfn "%s\t%s\t%0.1f\t%.01f\t%0.1f" student.Name student.Id student.MeanScore student.MinScore student.MaxScore
+        printfn "%s, %s\t%s\t%0.1f\t%.01f\t%0.1f" student.GivenName student.Surname student.Id student.MeanScore student.MinScore student.MaxScore
