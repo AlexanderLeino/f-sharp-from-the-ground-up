@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "9IHjgCsr0Hq1jK8wK/fn5HNBJx5DiDX8tlOBnMIf1U/XoVnOVTc/DhRDW+xP5gNN9+u1zdeMbDQSOQzRh+bodw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Alexa\\Documents\\coding-folders\\fsharp-from-the-ground-up\\ArrayCreation\\ArrayCreation.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alexa\\.nuget\\packages\\fsharp.core\\6.0.5\\fsharp.core.6.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -32,8 +32,8 @@ module Student =
 
     let fromString (s : string) =
         let elements = s.Split('\t')
-        let name = elements.[0] |> nameParts
-        let id = elements.[1]
+        let name = elements |> Array.tryHead |> Option.map nameParts
+        let id = Array.item 1 elements
         let scores = 
             elements
             |> Array.skip 2
@@ -42,14 +42,19 @@ module Student =
         let meanScore = scores |> Array.average
         let minScore = scores |> Array.min
         let maxScore = scores |> Array.max
-        {
-            Surname = name.Surname
-            GivenName = name.GivenName
-            Id = id
-            MeanScore = meanScore
-            MinScore = minScore
-            MaxScore = maxScore
-        }
+        match name with
+        | None -> failwith "An error has occured"
+        | Some name' -> 
+        
+            {
+                Surname = name'.Surname
+                GivenName = name'.GivenName
+                Id = id
+                MeanScore = meanScore
+                MinScore = minScore
+                MaxScore = maxScore
+            }
 
     let printSummary (student: Student) =
-        printfn "%s, %s\t%s\t%0.1f\t%.01f\t%0.1f" student.GivenName student.Surname student.Id student.MeanScore student.MinScore student.MaxScore
+        let fullName = sprintf "%s, %s" student.GivenName student.Surname 
+        printfn "%20s\t%s\t%0.1f\t%.01f\t%0.1f" fullName student.Id student.MeanScore student.MinScore student.MaxScore

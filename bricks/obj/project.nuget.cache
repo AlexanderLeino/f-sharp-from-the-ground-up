@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "kN8ov7UFeBXsTT/wHPy63jhq2xjaoRxGkG4FPD3bcj0nIigoB+GDTyZBIVIdb/Q0ApH2XLEqfN8CrZUxGVvocg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Alexa\\Documents\\coding-folders\\fsharp-from-the-ground-up\\bricks\\bricks.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alexa\\.nuget\\packages\\fsharp.core\\6.0.5\\fsharp.core.6.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}

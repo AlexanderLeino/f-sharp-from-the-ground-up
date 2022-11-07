@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "RN6z6sOB4kygryBvEfHBsEIpo8dzn2JGZchoQaF+VlhOV01zW1T3xoQStaxyTI9AVCVm0AvQCq1dJXzWRY9XWQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Alexa\\Documents\\coding-folders\\fsharp-from-the-ground-up\\creating-sequences\\creating-sequences.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alexa\\.nuget\\packages\\fsharp.core\\6.0.5\\fsharp.core.6.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
